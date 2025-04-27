@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-gem "foobara-dotenv-loader", "~> 0.0.1"
 gem "foobara-auth-http", "~> 0.0.1" # , path: "../auth-http"
+gem "foobara-dotenv-loader", "~> 0.0.1"
 gem "foobara-local-files-crud-driver", "~> 0.0.1"
 gem "foobara-rails-command-connector", "~> 0.0.1" # , path: "../rails-command-connector"
 
@@ -18,7 +18,7 @@ gem "puma", ">= 5.0"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem "tzinfo-data", platforms: %i[windows jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -30,8 +30,7 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
- gem "rack-cors"
-
+gem "rack-cors"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
