@@ -1,6 +1,9 @@
 source "https://rubygems.org"
 
-gem "foobara-auth-http", "~> 0.0.1" # , path: "../auth-http"
+# gem "foobara", path: "../../foobara/foobara"
+# gem "foobara-http-command-connector", path: "../../foobara/http-command-connector"
+
+gem "foobara-auth-http", "~> 0.0.1" # , path: "../../foobara/auth-http"
 gem "foobara-dotenv-loader", "~> 0.0.1"
 gem "foobara-local-files-crud-driver", "~> 0.0.1"
 gem "foobara-rails-command-connector", "~> 0.0.1" # , path: "../rails-command-connector"

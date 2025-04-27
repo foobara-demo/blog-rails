@@ -1,5 +1,10 @@
 require_relative "boot"
 
+require "foobara/load_dotenv"
+Foobara::LoadDotenv.run!(dir: "#{__dir__}/..")
+
+require "foobara/auth"
+
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -13,6 +18,11 @@ require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
 # require "rails/test_unit/railtie"
+
+if Rails.env.test? || Rails.env.development?
+  require "pry"
+  require "pry-byebug"
+end
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -36,9 +46,13 @@ module BlogRails
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    config.eager_load_paths << Rails.root.join("app", "commands")
+
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.middleware.use ActionDispatch::Cookies
   end
 end
