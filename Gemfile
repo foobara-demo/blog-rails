@@ -1,5 +1,10 @@
 source "https://rubygems.org"
 
+gem "foobara-dotenv-loader", "~> 0.0.1"
+gem "foobara-auth-http", "~> 0.0.1" # , path: "../auth-http"
+gem "foobara-local-files-crud-driver", "~> 0.0.1"
+gem "foobara-rails-command-connector", "~> 0.0.1" # , path: "../rails-command-connector"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
 # Use sqlite3 as the database for Active Record
@@ -25,12 +30,36 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
-# gem "rack-cors"
+ gem "rack-cors"
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  # gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "ostruct" # Only here to stop a warning caused by pry
+  gem "pry"
+  gem "pry-byebug"
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  gem "rubocop-rails-omakase", require: false
+  # gem "rubocop-rails-omakase", require: false
+
+  gem "rspec-rails", "~> 7"
+end
+
+group :development do
+  gem "foob", "~> 0.0.1"
+  gem "foobara-rubocop-rules", "~> 0.0.1"
+  gem "guard-rspec"
+  gem "rubocop-rake"
+  gem "rubocop-rspec"
+end
+
+group :test do
+  gem "foobara-spec-helpers", "~> 0.0.1"
+  gem "rspec"
+  gem "rspec-its"
+  gem "ruby-prof"
+  gem "simplecov"
+  gem "vcr"
+  gem "webmock"
 end
