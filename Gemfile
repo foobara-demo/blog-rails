@@ -1,4 +1,7 @@
+require_relative "version"
+
 source "https://rubygems.org"
+ruby FoobaraDemo::BlogRails::MINIMUM_RUBY_VERSION
 
 # gem "foobara", path: "../../foobara/foobara"
 # gem "foobara-http-command-connector", path: "../../foobara/http-command-connector"
