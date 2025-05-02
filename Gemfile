@@ -6,7 +6,7 @@ ruby FoobaraDemo::BlogRails::MINIMUM_RUBY_VERSION
 # gem "foobara", path: "../../foobara/foobara"
 # gem "foobara-http-command-connector", path: "../../foobara/http-command-connector"
 
-gem "foobara-auth-http", "~> 0.0.1" # , path: "../../foobara/auth-http"
+gem "foobara-auth-http", "~> 0.0.6" # , path: "../../foobara/auth-http"
 gem "foobara-dotenv-loader", "~> 0.0.1"
 gem "foobara-local-files-crud-driver", "~> 0.0.1"
 gem "foobara-rails-command-connector", "~> 0.0.1" # , path: "../rails-command-connector"
