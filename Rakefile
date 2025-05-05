@@ -10,5 +10,5 @@ unless Rails.env.production?
 
   RuboCop::RakeTask.new
 
-  task default: %i[spec rubocop]
+  task default: [:spec, :rubocop]
 end
