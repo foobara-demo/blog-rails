@@ -32,7 +32,8 @@ RSpec.describe "Login endpoint", type: :request do
       expect(login_result).to eq({})
 
       expect(response.headers["Set-Cookie"]).to match(
-        /refresh_token=[^;]+; path=\/run\/Foobara\/Auth\/; httponly; samesite=strict/
+        # It is samesite=none in all but prod without staging env flag on
+        /refresh_token=[^;]+; path=\/run\/Foobara\/Auth\/; httponly; samesite=none/
       )
       expect(response.headers["X-Access-Token"]).to be_a(String)
     end

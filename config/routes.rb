@@ -6,8 +6,8 @@ require "foobara/rails/routes"
 
 login_response_mutators = [
   Foobara::AuthHttp::MoveRefreshTokenToCookie.new(
-    secure: Rails.env.production?,
-    same_site: Rails.env.production? ? :strict : :none
+    secure: Rails.env.production? && ENV["FOOBARA_STAGING_ENV"] != "true",
+    same_site: Rails.env.production? && ENV["FOOBARA_STAGING_ENV"] != "true" ? :strict : :none
   ),
   Foobara::AuthHttp::MoveAccessTokenToHeader
 ]
