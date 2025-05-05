@@ -5,7 +5,10 @@ Foobara::CommandConnectors::RailsCommandConnector.new(authenticator: Foobara::Au
 require "foobara/rails/routes"
 
 login_response_mutators = [
-  Foobara::AuthHttp::MoveRefreshTokenToCookie.new(secure: Rails.env.production?),
+  Foobara::AuthHttp::MoveRefreshTokenToCookie.new(
+    secure: Rails.env.production?,
+    same_site: Rails.env.production? ? :strict : :none
+  ),
   Foobara::AuthHttp::MoveAccessTokenToHeader
 ]
 
