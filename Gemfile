@@ -53,7 +53,7 @@ end
 
 group :development do
   gem "foob", "~> 0.0.1"
-  gem "foobara-rubocop-rules", "~> 0.0.1"
+  gem "foobara-rubocop-rules", "~> 0.0.9"
   gem "guard-rspec"
   gem "rubocop-rake"
   gem "rubocop-rspec"

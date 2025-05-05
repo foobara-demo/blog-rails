@@ -201,7 +201,7 @@ GEM
     foobara-resque-scheduler-connector-generator (0.0.2)
       foobara
       foobara-files-generator
-    foobara-rubocop-rules (0.0.8)
+    foobara-rubocop-rules (0.0.9)
       rubocop
       rubocop-rspec
     foobara-sh-cli-connector (0.0.16)
@@ -399,7 +399,7 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.2)
-    rubocop (1.75.4)
+    rubocop (1.75.5)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -490,7 +490,7 @@ DEPENDENCIES
   foobara-dotenv-loader (~> 0.0.1)
   foobara-local-files-crud-driver (~> 0.0.1)
   foobara-rails-command-connector (~> 0.0.1)
-  foobara-rubocop-rules (~> 0.0.1)
+  foobara-rubocop-rules (~> 0.0.9)
   foobara-spec-helpers (~> 0.0.1)
   guard-rspec
   ostruct
