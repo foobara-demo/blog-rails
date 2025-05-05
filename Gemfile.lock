@@ -135,17 +135,17 @@ GEM
       foobara-type-generator (~> 0.0.1)
       foobara-typescript-react-command-form-generator (~> 0.0.1)
       foobara-typescript-remote-command-generator (~> 0.0.1)
-    foobara (0.0.113)
+    foobara (0.0.116)
       bigdecimal
       foobara-lru-cache (~> 0.0.2)
       foobara-util (~> 0.0.11)
       inheritable-thread-vars (~> 0.0.1)
-    foobara-auth (0.0.9)
+    foobara-auth (0.0.11)
       argon2
       foobara (~> 0.0.1)
       jwt
-    foobara-auth-http (0.0.4)
-      foobara (~> 0.0.108)
+    foobara-auth-http (0.0.7)
+      foobara (~> 0.0.116)
       foobara-auth (~> 0.0.1)
       foobara-http-command-connector (~> 0.0.1)
     foobara-command-generator (0.0.3)
@@ -168,8 +168,8 @@ GEM
       foobara-files-generator
     foobara-files-generator (0.0.5)
       foobara
-    foobara-http-command-connector (0.0.24)
-      foobara (~> 0.0.88)
+    foobara-http-command-connector (0.0.26)
+      foobara (~> 0.0.116)
     foobara-local-files-crud-driver (0.0.9)
       foobara (~> 0.0.102)
     foobara-local-files-crud-driver-generator (0.0.3)
@@ -217,7 +217,7 @@ GEM
       foobara-typescript-remote-command-generator (~> 0.0.1)
     foobara-typescript-remote-command-generator (0.0.19)
       foobara-files-generator (~> 0.0.1)
-    foobara-util (0.0.11)
+    foobara-util (0.0.12)
     formatador (1.1.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -486,7 +486,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   foob (~> 0.0.1)
-  foobara-auth-http (~> 0.0.1)
+  foobara-auth-http (~> 0.0.7)
   foobara-dotenv-loader (~> 0.0.1)
   foobara-local-files-crud-driver (~> 0.0.1)
   foobara-rails-command-connector (~> 0.0.1)
