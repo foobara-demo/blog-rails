@@ -201,7 +201,7 @@ GEM
     foobara-resque-scheduler-connector-generator (0.0.2)
       foobara
       foobara-files-generator
-    foobara-rubocop-rules (0.0.9)
+    foobara-rubocop-rules (0.0.10)
       rubocop
       rubocop-rspec
     foobara-sh-cli-connector (0.0.17)
@@ -490,7 +490,7 @@ DEPENDENCIES
   foobara-dotenv-loader (~> 0.0.1)
   foobara-local-files-crud-driver (~> 0.0.1)
   foobara-rails-command-connector (~> 0.0.1)
-  foobara-rubocop-rules (~> 0.0.1)
+  foobara-rubocop-rules (~> 0.0.10)
   foobara-spec-helpers (~> 0.0.1)
   guard-rspec
   ostruct
