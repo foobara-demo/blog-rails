@@ -11,6 +11,9 @@ login_response_mutators = [
   ),
   Foobara::AuthHttp::MoveAccessTokenToHeader
 ]
+set_user_to_current_user = Foobara::CommandConnectors::Http::SetInputToProcResult.for(:user) do
+  authenticated_user
+end
 
 Rails.application.routes.draw do
   command Foobara::Auth::Register,
@@ -28,6 +31,12 @@ Rails.application.routes.draw do
   command Foobara::Auth::Logout,
           request_mutators: Foobara::AuthHttp::SetRefreshTokenFromCookie,
           response_mutators: Foobara::AuthHttp::ClearAccessTokenHeader
+
+  command Foobara::BlogWww::GetCurrentUser,
+          requires_authentication: true,
+          # serializers: Foobara::CommandConnectors::Serializers::AggregateSerializer,
+          # aggregate_entities: true,
+          request_mutators: set_user_to_current_user
 
   command ComputeExponent, requires_authentication: true
 
